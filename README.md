@@ -45,7 +45,7 @@ __There is one notable difference compared to the Web API__: You have to explici
 ### setMetadata(...)
 
 ```typescript
-setMetadata(options: MetadataOptions) => Promise<void>
+setMetadata(options: MetadataOptions) => any
 ```
 
 Sets metadata of the currently playing media. Analogue to setting the
@@ -57,13 +57,15 @@ when using the Media Session API directly.
 | ------------- | ----------------------------------------------------------- |
 | **`options`** | <code><a href="#metadataoptions">MetadataOptions</a></code> |
 
+**Returns:** <code>any</code>
+
 --------------------
 
 
 ### setPlaybackState(...)
 
 ```typescript
-setPlaybackState(options: PlaybackStateOptions) => Promise<void>
+setPlaybackState(options: PlaybackStateOptions) => any
 ```
 
 Indicate whether media is playing or not. Analogue to setting the
@@ -75,13 +77,15 @@ when using the Media Session API directly.
 | ------------- | --------------------------------------------------------------------- |
 | **`options`** | <code><a href="#playbackstateoptions">PlaybackStateOptions</a></code> |
 
+**Returns:** <code>any</code>
+
 --------------------
 
 
 ### setActionHandler(...)
 
 ```typescript
-setActionHandler(options: ActionHandlerOptions, handler: ActionHandler | null) => Promise<void>
+setActionHandler(options: ActionHandlerOptions, handler: ActionHandler | null) => any
 ```
 
 Sets handler for media session actions (e.g. initiated via onscreen media
@@ -95,13 +99,15 @@ when using the Media Session API directly.
 | **`options`** | <code><a href="#actionhandleroptions">ActionHandlerOptions</a></code> |
 | **`handler`** | <code><a href="#actionhandler">ActionHandler</a> \| null</code>       |
 
+**Returns:** <code>any</code>
+
 --------------------
 
 
 ### setPositionState(...)
 
 ```typescript
-setPositionState(options: PositionStateOptions) => Promise<void>
+setPositionState(options: PositionStateOptions) => any
 ```
 
 Update current media playback position, duration and speed. Analogue to
@@ -112,6 +118,8 @@ when using the Media Session API directly.
 | Param         | Type                                                                  |
 | ------------- | --------------------------------------------------------------------- |
 | **`options`** | <code><a href="#positionstateoptions">PositionStateOptions</a></code> |
+
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -125,7 +133,7 @@ when using the Media Session API directly.
 | ------------- | ------------------- |
 | **`album`**   | <code>string</code> |
 | **`artist`**  | <code>string</code> |
-| **`artwork`** | <code>any[]</code>  |
+| **`artwork`** | <code>{}</code>     |
 | **`title`**   | <code>string</code> |
 
 
