@@ -108,11 +108,11 @@ public class MediaSessionService extends Service {
                 .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE))
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-          startForeground(NOTIFICATION_ID, notificationBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
-        } else {
-          startForeground(NOTIFICATION_ID, notificationBuilder.build());
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//          startForeground(NOTIFICATION_ID, notificationBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+//        } else {
+//          startForeground(NOTIFICATION_ID, notificationBuilder.build());
+//        }
 
         notificationActions.put("play", new NotificationCompat.Action(
                 R.drawable.ic_baseline_play_arrow_24, "Play", MediaButtonReceiver.buildMediaButtonPendingIntent(this, PlaybackStateCompat.ACTION_PLAY)
@@ -147,7 +147,7 @@ public class MediaSessionService extends Service {
     }
 
     public void destroy() {
-        stopForeground(true);
+//        stopForeground(true);
         stopSelf();
     }
 
